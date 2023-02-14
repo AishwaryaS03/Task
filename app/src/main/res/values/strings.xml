@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">NewsApplicationWithViewPager</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password_tost">"New password and retyped password are not same"</string>
+    <string name="reset_toast">"Password Reset Successful"</string>
+    <string name="my_profile">My Profile</string>
+    <string name="sign_up">Sign UP</string>
+    <string name="remember_my_credential">Remember my credential*</string>
+    <string name="you_password">You Password</string>
+    <string name="your_name">Your name</string>
+    <string name="reset">RESET</string>
+    <string name="retype_new_password">Retype New Password</string>
+    <string name="new_password">New Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_id">Email ID</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="update">Update</string>
+    <string name="the_cryptoverse_witnessed_a_major_boom_in_terms_of_the_numbers">The cryptoverse witnessed a major boom in terms of the numbers.</string>
+    <string name="_17_06_2022">17/06/2022</string>
+    <string name = "new_pass_not_retype_pass">New Paaword and Retype Password Are Not Same</string>
+</resources>
