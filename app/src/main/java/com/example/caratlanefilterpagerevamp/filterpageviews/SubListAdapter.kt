@@ -6,14 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
+import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.caratlanefilterpagerevamp.filterpagedataclass.ItemsViewModelSubList
 import com.example.caratlanefilterpagerevamp.R
+import com.example.caratlanefilterpagerevamp.filterpageviewmodel.SubListViewModel
 
-class SubListAdapter(private val mList: List<ItemsViewModelSubList>) : RecyclerView.Adapter<SubListAdapter.ViewHolder>() {
-
-    private var checkedCount = 0
-
+class SubListAdapter(
+    private val mList: List<ItemsViewModelSubList>,
+    private val viewModel: SubListViewModel
+) : RecyclerView.Adapter<SubListAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.sub_list_view_design, parent, false)
@@ -23,11 +26,7 @@ class SubListAdapter(private val mList: List<ItemsViewModelSubList>) : RecyclerV
         val itemViewModelTwo = mList[position]
         holder.textView.text = itemViewModelTwo.text
         holder.checkBox.setOnCheckedChangeListener { _, isChecked ->
-            checkedCount += if (isChecked) 1 else -1
-            Log.d("Aish", "onBindViewHolder: $checkedCount")
-            //    (holder.itemView.context as MainActivity).updateCheckedCount(checkedCount)
-            //     notifyItemChanged(checkedCount)
-
+            viewModel.updateCheckedCount(isChecked)
         }
     }
     override fun getItemCount(): Int {

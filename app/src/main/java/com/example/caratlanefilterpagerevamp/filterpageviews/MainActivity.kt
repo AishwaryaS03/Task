@@ -10,6 +10,5 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val filterPageRevamp = FilterPageRevamp()
         supportFragmentManager.beginTransaction().replace(R.id.activity_main_container, filterPageRevamp).commit()
-
     }
 }
